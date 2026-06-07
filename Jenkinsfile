@@ -4,7 +4,7 @@ pipeline {
         stage('Clone Code') {
             steps {
                 // Replace with your GitHub repository URL
-                git branch: 'main', url: '[ https://github.com/Shshank009/AWS-DevOps-Projects]'
+                git branch: 'main', url:[https://github.com/Shshank009/AWS-DevOps-Projects.git]
             }
         }
         stage('Build Docker Image') {
