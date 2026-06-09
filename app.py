@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, jsonify
 from flask_mysqldb import MySQL
-from datetime import datetime
 
 app = Flask(__name__)
 
@@ -39,6 +38,10 @@ def get_category(rating):
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/dashboard')
+def dashboard():
     cur = mysql.connection.cursor()
     cur.execute('SELECT customer_name, service_type, rating, comment, category, created_at FROM nps_feedback ORDER BY created_at DESC')
     feedbacks = cur.fetchall()
@@ -56,7 +59,7 @@ def index():
     detractors = cur.fetchone()[0]
 
     cur.close()
-    return render_template('index.html',
+    return render_template('dashboard.html',
         feedbacks=feedbacks,
         avg_scores=avg_scores,
         promoters=promoters,
