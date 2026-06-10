@@ -2,7 +2,7 @@
 
 A fully automated CI/CD pipeline deploying a two-tier Flask + MySQL application on AWS EC2, built to capture and analyse customer Net Promoter Scores (NPS) across banking service channels.
 
-🔗 **Live Demo:** [bit.ly/securebank-nps](https://bit.ly/securebank-nps)
+🔗 **Live Demo:** bit.ly/4uqJeLG
 
 ---
 
